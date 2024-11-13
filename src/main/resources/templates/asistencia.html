@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Pez Sierra - Asistencia</title>
+    <link rel="stylesheet" href="./css/asistencia.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="./img/logo.png" alt="Logo CD Pez Sierra">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="./img/dashbord.png" alt="Dashboard Icon" class="icon">
+                        <a href="./index.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <img src="./img/pagos.png" alt="Payments Icon" class="icon">
+                        <a href="/pagos.html">Pagos</a>
+                    </li>
+                    <li class="active">
+                        <img src="./img/asistencia/icon.png" alt="Attendance Icon" class="icon">
+                        <a href="/asistencia.html">Asistencia</a>
+                    </li>
+                    <li>
+                        <img src="./img/planesEstudio.png" alt="Study Plan Icon" class="icon">
+                        <a href="/planes.html">Planes de Estudio</a>
+                    </li>
+                    <li>
+                        <img src="./img/asistencia/esticon.png" alt="Students Icon" class="icon">
+                        <a href="/estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li>
+                        <img src="./img/registro.png" alt="Register Icon" class="icon">
+                        <a href="/registro.html">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <div class="header-title">
+                    <h2>CD Pez Sierra</h2>
+                </div>
+              
+                <div class="user-info">
+                    <div class="search-box">
+                        <img src="./img/lupita.png" alt="Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar..." class="search">
+                    </div>
+                    <img src="./img/perfil.png" alt="Usuario" class="user-icon">
+                    <span>David Smith</span>
+                </div>
+            </header>
+
+              <!-- Controls -->
+              <section class="controls">
+                <div class="left-controls">
+                    <select class="group-select">
+                        <option value="">Seleccionar Grupo</option>
+                        <option value="grupo1">Grupo 1</option>
+                        <option value="grupo2">Grupo 2</option>
+                    </select>
+                    <select class="activity-select">
+                        <option value="">Seleccionar Actividad</option>
+                        <option value="futbol">Fútbol</option>
+                        <option value="natacion">Natación</option>
+                    </select>
+                </div>
+                <div class="right-controls">
+                    <button class="btn new-attendance">Nueva Asistencia</button>
+                    <button class="btn calendar">Calendario</button>
+                    <input type="date" class="date-select">
+                </div>
+            </section>
+
+
+              <!-- Asistencia Tabla -->
+              <section class="asistencia-table">
+                <h3>Fútbol</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Actividad</th>
+                            <th>Estudiante</th>
+                            <th>Asistencia</th>
+                            <th>Notas</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Fútbol</td>
+                            <td>Abigail Thomas</td>
+                            <td><input type="checkbox" checked></td>
+                            <td>Llegada tarde</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Fútbol</td>
+                            <td>John Clark</td>
+                            <td><input type="checkbox" checked></td>
+                            <td>N/A</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Natación</td>
+                            <td>Christopher Lee</td>
+                            <td><input type="checkbox"></td>
+                            <td>A tiempo</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Natación</td>
+                            <td>Elena Jimenez</td>
+                            <td><input type="checkbox" checked></td>
+                            <td>A tiempo</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Fútbol</td>
+                            <td>Javier Ortiz</td>
+                            <td><input type="checkbox"></td>
+                            <td>Con permiso</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Natación</td>
+                            <td>Brian Baker</td>
+                            <td><input type="checkbox" checked></td>
+                            <td>A tiempo</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Natación</td>
+                            <td>Juan Martin</td>
+                            <td><input type="checkbox" checked></td>
+                            <td>Con permiso</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>01-10-2024</td>
+                            <td>Fútbol</td>
+                            <td>Anthony White</td>
+                            <td><input type="checkbox" checked></td>
+                            <td>N/A</td>
+                            <td><button class="btn reintegrate">Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="save-btn-container">
+                    <button class="save-btn">Guardar</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>

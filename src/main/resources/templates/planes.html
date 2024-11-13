@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Pez Sierra - Planes de Estudio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/planes.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="./img/logo.png" alt="Logo CD Pez Sierra">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="./img/dashbord.png" alt="Dashboard Icon" class="icon">
+                        <a href="./index.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <img src="./img/pagos.png" alt="Payments Icon" class="icon">
+                        <a href="/pagos.html">Pagos</a>
+                    </li>
+                    <li>
+                        <img src="./img/asistencia.png" alt="Attendance Icon" class="icon">
+                        <a href="/asistencia.html">Asistencia</a>
+                    </li>
+                    <li class="active">
+                        <img src="./img/planes/icon0.png" alt="Study Plan Icon" class="icon">
+                        <a href="/planes.html">Planes de Estudio</a>
+                    </li>
+                    <li>
+                        <img src="./img/planes/esticon.png" alt="Students Icon" class="icon">
+                        <a href="/estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li>
+                        <img src="./img/registro.png" alt="Register Icon" class="icon">
+                        <a href="/registro.html">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <div class="header-title">
+                    <h2>CD Pez Sierra</h2>
+                </div>
+                <div class="user-info">
+                    <div class="search-box">
+                        <img src="./img/lupita.png" alt="Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar..." class="search">
+                    </div>
+                    <img src="./img/perfil.png" alt="Usuario" class="user-icon">
+                    <span>David Smith</span>
+                </div>
+            </header>
+
+
+             <!-- Controls -->
+             <section class="controls">
+                <div class="right-controls">
+                    <select class="activity-select">
+                        <option value="">Seleccionar por Plan</option>
+                        <option value="futbol1">Plan 01 - Fútbol</option>
+                        <option value="futbol2">Plan 02 - Fútbol</option>
+                        <option value="futbol3">Plan 03 - Fútbol</option>
+                        <option value="natacion1">Plan 01 - Natación</option>
+                        <option value="natacion2">Plan 02 - Natación</option>
+                        <option value="natacion3">Plan 03 - Natación</option>
+                    </select>
+                </div>
+            </section>
+
+
+            <!-- Section Plans -->
+            <section class="container-plans">
+                <div class="row">
+                    <!-- Primera fila -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./img/planes/plan1.png" class="img-fluid rounded-start" alt="Plan 01 - Fútbol">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan 01 - Fútbol para principiantes, Introducción</h5>
+                                        <p class="card-text">4 semanas, 4-5 años, Mixto</p>
+                                        <p class="card-text"><small class="text-body-secondary">Elizabeth Lee</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Segunda fila -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./img/planes/plan1n.png" class="img-fluid rounded-start" alt="Plan 01 - Natación">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan 01 - Natación para principiantes, Introducción</h5>
+                                        <p class="card-text">2 semanas, 2-4 años, Mixto</p>
+                                        <p class="card-text"><small class="text-body-secondary">Sarah Johnson</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./img/planes/plan2.png" class="img-fluid rounded-start" alt="Plan 02 - Fútbol">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan 02 - Fútbol para principiantes, Calentamiento y Flexibilidad</h5>
+                                        <p class="card-text">30min, 5-6 años, Mixto</p>
+                                        <p class="card-text"><small class="text-body-secondary">Brian Martinez</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Tercera fila -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./img/planes/plan2n.png" class="img-fluid rounded-start" alt="Plan 02 - Natación">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan 02 - Natación para principiantes, Calentamiento y Flexibilidad</h5>
+                                        <p class="card-text">30min, 4-6 años, Mixto</p>
+                                        <p class="card-text"><small class="text-body-secondary">Paulo Martínez</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./img/planes/plan3.png" class="img-fluid rounded-start" alt="Plan 03 - Fútbol">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan 03 - Fútbol para principiantes, Habilidades Técnicas</h5>
+                                        <p class="card-text">4 semanas, 8-10 años, Masculino</p>
+                                        <p class="card-text"><small class="text-body-secondary">David Lee</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./img/planes/plan3n.png" class="img-fluid rounded-start" alt="Plan 03 - Natación">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan 03 - Natación para principiantes, Técnica de Natación</h5>
+                                        <p class="card-text">3 semanas, 6-8 años, Mixto</p>
+                                        <p class="card-text"><small class="text-body-secondary">Christopher Lee</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Pez Sierra - Pagos</title>
+    <link rel="stylesheet" href="./css/pagos.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="./img/logo.png" alt="Logo CD Pez Sierra">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="./img/dashbord.png" alt="Dashboard Icon" class="icon">
+                        <a href="./index.html">Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <img src="./img/pagos/icon0.png" alt="Payments Icon" class="icon">
+                        <a href="./pagos.html">Pagos</a>
+                    </li>
+                    <li>
+                        <img src="./img/asistencia.png" alt="Attendance Icon" class="icon">
+                        <a href="/asistencia.html">Asistencia</a>
+                    </li>
+                    <li>
+                        <img src="./img/planesEstudio.png" alt="Study Plan Icon" class="icon">
+                        <a href="/planes.html">Planes de Estudio</a>
+                    </li>
+                    <li>
+                        <img src="./img/pagos/esticon.png" alt="Students Icon" class="icon">
+                        <a href="/estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li>
+                        <img src="./img/registro.png" alt="Register Icon" class="icon">
+                        <a href="/registro.html">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <div class="header-title">
+                    <h2>CD Pez Sierra</h2>
+                </div>
+                <div class="user-info">
+                    <div class="search-box">
+                        <img src="./img/lupita.png" alt="Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar..." class="search">
+                    </div>
+                    <img src="./img/perfil.png" alt="Usuario" class="user-icon">
+                    <span>David Smith</span>
+                </div>
+            </header>
+
+            <!--Seccion de Pagos-->
+            <section class="cards-pagos">
+                <div class="cards-title">
+                    <h2>Pagos</h2>
+                    <div class="btn-container">
+                        <button class="exp-btn">Exportar</button>
+                        <button class="new-btn">Nuevo pago</button>
+                    </div>
+                </div>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="./img/pagos/icon1.png" class="img-icon" alt="Icono Todos los pagos">
+                        <h3>Todos los pagos</h3>
+                        <p>$1,380</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/pagos/icon2.png" class="img-icon" alt="Icono Pagos exitosos">
+                        <h3>Pagos exitosos</h3>
+                        <p>$2,380</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/pagos/icon3.png" class="img-icon" alt="Icono Pagos pendientes">
+                        <h3>Pagos pendientes</h3>
+                        <p>$380</p>
+                    </div>
+                    <!--
+                    <div class="card">
+                        <img src="./img/pagos/icon4.png" class="img-icon" alt="Icono Pagos fallidos">
+                        <h4>Pagos fallidos</h4>
+                        <p>$590</p>
+                    </div>
+                    -->
+                    <div class="card">
+                        <img src="./img/pagos/icon5.png" class="img-icon" alt="Icono Pagos incompletos">
+                        <h3>Pagos incompletos</h3>
+                        <p>$670</p>
+                    </div>
+                </div>                
+            </section>
+            
+
+            <!-- Asistencia Tabla -->
+            <section class="pagos-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>     </th>
+                            <th>CÓDIGO</th>
+                            <th>ESTUDIANTE</th>
+                            <th>DESCRIPCIÓN</th>
+                            <th>ESTADO</th>
+                            <th>HORA</th>
+                            <th>FECHA</th>
+                            <th>MONTO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#29359</td>
+                            <td>Abigail Thomas</td>
+                            <td>Clase de Fútbol</td>
+                            <td>Incompleto</td>
+                            <td>03:09 AM</td>
+                            <td>Feb 15, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>#29359</td>
+                            <td>Matias Martinez</td>
+                            <td>Clase de Fútbol</td>
+                            <td>Exitoso</td>
+                            <td>02:26 PM</td>
+                            <td>Feb 16, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>#29359</td>
+                            <td>Emily Johnson</td>
+                            <td>Clase de Natación</td>
+                            <td>Exitoso</td>
+                            <td>07:04 AM</td>
+                            <td>Feb 16, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#29359</td>
+                            <td>Brayan Young</td>
+                            <td>Clase de Fútbol</td>
+                            <td>Pendiente</td>
+                            <td>09:50 AM</td>
+                            <td>Feb 18, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" ></td>
+                            <td>#29359</td>
+                            <td>Julieta Molina</td>
+                            <td>Clase de Fútbol</td>
+                            <td>Exitoso</td>
+                            <td>12:09 PM</td>
+                            <td>Feb 18, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#29359</td>
+                            <td>Layla Philips</td>
+                            <td>Clase de Fútbol</td>
+                            <td>Fallido</td>
+                            <td>01:45 PM</td>
+                            <td>Feb 20, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" ></td>
+                            <td>#29359</td>
+                            <td>Ryan White</td>
+                            <td>Clase de Natación</td>
+                            <td>Pendiente</td>
+                            <td>04:36 PM</td>
+                            <td>Feb 16, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>#29359</td>
+                            <td>Emma Clark</td>
+                            <td>Clase de Natación</td>
+                            <td>Exitoso</td>
+                            <td>09:12 AM</td>
+                            <td>Feb 16, 2024</td>
+                            <td>$30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div> 
+
+</body>
+</html>

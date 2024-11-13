@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Pez Sierra</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="./img/logo.png" alt="Logo CD Pez Sierra">
+            </div>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <img src="./img/index/icon.png" alt="Dashboard Icon" class="icon">
+                        <a href="./index.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <img src="./img/pagos.png" alt="Payments Icon" class="icon">
+                        <a href="/pagos.html">Pagos</a>
+                    </li>
+                    <li>
+                        <img src="./img/asistencia.png" alt="Attendance Icon" class="icon">
+                        <a href="/asistencia.html">Asistencia</a>
+                    </li>
+                    <li>
+                        <img src="./img/planesEstudio.png" alt="Study Plan Icon" class="icon">
+                        <a href="/planes.html">Planes de Estudio</a>
+                    </li>
+                    <li>
+                        <img src="./img/index/esticon.png" alt="Students Icon" class="icon">
+                        <a href="/estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li>
+                        <img src="./img/registro.png" alt="Register Icon" class="icon">
+                        <a href="/registro.html">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <div class="header-title">
+                    <h2>CD Pez Sierra</h2>
+                </div>
+                <div class="user-info">
+                    <div class="search-box">
+                        <img src="./img/lupita.png" alt="Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar..." class="search">
+                    </div>
+                    <img src="./img/perfil.png" alt="Usuario" class="user-icon">
+                    <span>David Smith</span>
+                </div>
+            </header>
+
+ 
+              <!-- Sección de Contenido Principal -->               
+                <section class="next-payments">
+                    <div class="welcome-header">
+                        <h3>Bienvenido, David <span class="wave-emoji">👋</span></h3>
+                    </div>
+                
+                    <div class="payments-header">
+                        <div class="title">
+                            <img src="./img/index/icon1.png" alt="Calendar Icon" class="calendar-icon">
+                            <h3>Pagos siguientes</h3>
+                        </div>
+                        <div class="navigation">
+                            <button class="nav-btn">&lt;</button>
+                            <button class="nav-btn">&gt;</button>
+                            <button class="today-btn">Today</button>
+                        </div>
+                    </div>
+                
+                    <div class="calendar">
+                        <div class="day">LUNES<div class="date">26</div></div>
+                        <div class="day">MARTES<div class="date">27</div></div>
+                        <div class="day">MIÉRCOLES<div class="date">28</div></div>
+                        <div class="day">JUEVES<div class="date">29</div></div>
+                        <div class="day">
+                            VIERNES
+                            <div class="date">30</div>
+                            <div class="payments-indicator">
+                                <div title="Payment 1"><img src="./img/index/coach1.png" class="payment-icon"></div>
+                                <div title="Payment 2"><img src="./img/index/coach2.png" class="payment-icon"></div>
+                                <div title="Payment 3"><img src="./img/index/coach3.png" class="payment-icon"></div>
+                            </div>
+                        </div>
+                        <div class="day">SÁBADO<div class="date">01</div></div>
+                        <div class="day">DOMINGO<div class="date">02</div></div>
+                    </div>
+                </section>
+
+                <section class="recruitment-coaches-section">
+                    <!-- Recruitment Section -->
+                    <div class="recruitment-section">
+                        <!-- Recruitment Header -->
+                        <div class="recruitment-header">
+                            <h3><img src="./img/index/icon2.png" alt="Recruitment Icon" class="icon"> Reclutamiento</h3>
+                            <a href="#" class="view-all">View All &gt;</a>
+                        </div>
+                
+                        <!-- Recruitment Stats -->
+                        <div class="recruitment-stats">
+                            <div class="info-card">
+                                <div class="info-top">
+                                    <i class="icon">👤</i>
+                                    <span class="info-number">10</span>
+                                </div>
+                                <p class="info-text">Entrenadores</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-top">
+                                    <i class="icon">🆕</i>
+                                    <span class="info-number">5</span>
+                                </div>
+                                <p class="info-text">Nuevos Estudiantes</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-top">
+                                    <i class="icon">⏳</i>
+                                    <span class="info-number">3</span>
+                                </div>
+                                <p class="info-text">En Espera de Registro</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-top">
+                                    <i class="icon">❌</i>
+                                    <span class="info-number">2</span>
+                                </div>
+                                <p class="info-text">Estudiantes Inactivos</p>
+                            </div>
+                        </div>                        
+                        
+                
+                        <!-- Recruitment Table -->
+                        <div class="recruitment-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>GRUPO</th>
+                                        <th>ESTUDIANTES</th>
+                                        <th>VACANTES</th>
+                                        <th>FECHA INICIO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fútbol 01 - PRIN</td>
+                                        <td>10</td>
+                                        <td>2</td>
+                                        <td>09/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fútbol 02 - INTE</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>15/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fútbol 03 - AVAN</td>
+                                        <td>12</td>
+                                        <td>3</td>
+                                        <td>19/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natación 01 - PRIN</td>
+                                        <td>5</td>
+                                        <td>4</td>
+                                        <td>22/01/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natación 02 - INTE</td>
+                                        <td>18</td>
+                                        <td>5</td>
+                                        <td>22/01/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natación 03 - AVAN</td>
+                                        <td>11</td>
+                                        <td>9</td>
+                                        <td>22/01/2024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+                    <!-- Coaches Section -->
+                    <div class="coaches-section">
+                        <h4>Entrenadores</h4>
+                        <ul class="coach-list">
+                            <li>
+                                <img src="./img/index/coach4.png" alt="Coach Photo">
+                                <span>John Davis</span>
+                                <span class="tag">Natación</span>
+                            </li>
+                            <li>
+                                <img src="./img/index/coach5.png" alt="Coach Photo">
+                                <span>Matthew Johnson</span>
+                                <span class="tag">Fútbol</span>
+                            </li>
+                            <li>
+                                <img src="./img/index/coach6.png" alt="Coach Photo">
+                                <span>Jessica Wilson</span>
+                                <span class="tag">Natación</span>
+                            </li>
+                            <li>
+                                <img src="./img/index/coach1.png" alt="Coach Photo">
+                                <span>Elizabeth Hall</span>
+                                <span class="tag">Natación</span>
+                            </li>
+                            <li>
+                                <img src="./img/index/coach2.png" alt="Coach Photo">
+                                <span>Mark Taylor</span>
+                                <span class="tag">Fútbol</span>
+                            </li>
+                            <li>
+                                <img src="./img/index/coach3.png" alt="Coach Photo">
+                                <span>Joshua Taylor</span>
+                                <span class="tag">Fútbol</span>
+                            </li>
+                            <li>
+                                <img src="./img/perfil.png" alt="Coach Photo">
+                                <span>Rafael Gomez</span>
+                                <span class="tag">Natación</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="refresh-btn-container">
+                    <button class="refresh-btn">Refrescar</button>
+                </div>
+        </main>
+    </div>
+</body>
+</html>
