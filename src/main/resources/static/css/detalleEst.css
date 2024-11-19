@@ -1,0 +1,537 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+   
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ---------------*/
+.sidebar {
+    width: 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    position: fixed; 
+    left: 0; 
+    height: 100vh; 
+}
+
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.sidebar .icon {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.sidebar nav ul li.active {
+    color: #007bff;
+}
+
+
+/* ------------------- */
+main {
+    margin-left: 300px;
+    padding: 20px;
+    flex: 1;
+    overflow: auto; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    color: #10028b;
+    font-size: larger;
+   
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea al extremo izquierdo */
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 10px; /* Espacio debajo del enlace */
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.profile-email {
+    color: #7f8c8d;
+}
+
+
+
+
+/* -----------------------*/
+.section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+}
+
+.title-left img {
+    margin-right: 10px;
+}
+
+.section-title img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.section h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+/* ----------------- */
+.section-title {
+    display: flex;
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+.section-title h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.edit-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.edit-button:hover {
+    background-color: #79b5dd;
+}
+
+.section-title:not(.with-button) {
+    justify-content: flex-start; 
+}
+
+.with-button {
+    justify-content: space-between; 
+}
+
+
+/*-------------------------*/
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.info-item {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-item .label {
+    font-weight: bold;
+    color: #7d7e7e;
+}
+
+.info-item .value {
+    color: #2c3e50;
+}
+
+/* Subscription */
+.subscription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscription-plan {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.plan-name {
+    color: #2c3e50;
+}
+
+.days-remaining {
+    color: #7057aa;
+    font-weight: bold;
+}
+
+/* Payment Section */
+
+.payment-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.section-title h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.payment-table th, .payment-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ecf0f1;
+}
+
+.payment-table th {
+    background-color: #d8d9da;
+    color: #020202;
+    font-weight: bold;
+}
+
+.payment-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.payment-table tr:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+.status-success {
+    color: #27ae60; 
+}
+
+.status-incomp {
+    color: #636464; 
+}
+
+.status-pendient {
+    color: #e74c3c;   
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+
+/* Attendance History */
+.attendance-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-title {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.attendance-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.late .dot {
+    background-color: #e74c3c;
+}
+
+.on-time .dot {
+    background-color: #27ae60;
+}
+
+.attendance-description {
+    flex: 1;
+    color: #2c3e50;
+}
+
+.attendance-date {
+    color: #7f8c8d;
+}
+
+.show-more {
+    text-align: center;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.show-more:hover {
+    text-decoration: underline;
+}
+
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.section-title h3 {
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.subscription-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.subscription-list > ul > li {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.inscripcioneslist{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription-list > ul > li > ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #2980b9;
+}
+
+.subscription-list > ul > li > ul > li {
+    font-size: 18px;
+    color: #7f8c8d;
+    position: relative;
+}
+
+/* Estilo para los nombres de los clubes */
+.subscription-list .club-name {
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Estilos adicionales */
+.section:hover {
+    background-color: #e0e6ed;
+}
+
+.section-title h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-list ul ul li:hover {
+    color: #2980b9;
+}
+
+/* Estilo para los días restantes */
+.days-remaining {
+    font-size: 16px;
+    color: #e74c3c;
+    background-color: #fdf2f2;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contactos{
+    margin-top: 2%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Color del slider cuando está activo */
+input:checked + .slider {
+    background-color: #4CAF50; /* Verde */
+}
+
+/* Color del slider cuando está inactivo */
+input:not(:checked) + .slider {
+    background-color: #f44336; /* Rojo */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Apariencia para el texto de estado */
+.estado {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/* Color del texto cuando está activo */
+.estado-activo {
+    color: #4CAF50; /* Verde */
+}
+
+/* Color del texto cuando está inactivo */
+.estado-inactivo {
+    color: #f44336; /* Rojo */
+}
+
+
+
+

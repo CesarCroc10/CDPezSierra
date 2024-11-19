@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_csrf" th:content="${_csrf.token}"> <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <title>CD Pez Sierra - Registro</title>
+    <link th:href="@{/css/detalleEst.css}" rel="stylesheet" >
+</head>
+<body>
+     <div class="container">
+         <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img th:src="@{/img/logo.png}" alt="Logo CD Pez Sierra">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <img th:src="@{/img/dashbord.png}" alt="Dashboard Icon" class="icon">
+                        <a href="./index.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <img th:src="@{/img/pagos.png}" alt="Payments Icon" class="icon">
+                        <a href="/pagos.html">Pagos</a>
+                    </li>
+                    <li>
+                        <img th:src="@{/img/asistencia.png}" alt="Attendance Icon" class="icon">
+                        <a href="/asistencia.html">Asistencia</a>
+                    </li>
+                    <li>
+                        <img th:src="@{/img/planesEstudio.png}" alt="Study Plan Icon" class="icon">
+                        <a href="/planes.html">Planes de Estudio</a>
+                    </li>
+                    <li class="active">
+                        <img th:src="@{/img/estudiantes/estudiantes.png}" alt="Students Icon" class="icon">
+                        <a href="/estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li class="active">
+                        <img th:src="@{/img/registro.png}" alt="Register Icon" class="icon">
+                        <a href="/registro.html">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <div class="header-title">
+                    <h2>CD Pez Sierra</h2>
+                </div>
+                <div class="user-info">
+                    <img th:src="@{/img/perfil.png}" alt="Usuario" class="user-icon">
+                    <span>David Smith</span>
+                </div>
+            </header>
+    
+             <!-- Perfil del Usuario -->
+             <section class="profile-header">
+                <a th:href="@{/Estudiantes/listado}" class="back-link">← Regresar al listado de estudiantes</a>
+                <div class="profile-details">
+                    <div class="profile-info">
+                        <h2 class="profile-name" th:text="${alumno.nombre + ' ' + alumno.segundo_nombre + ' ' + alumno.apellido + ' ' + alumno.segundo_apellido}">Elizabeth Rosse Smith Allen</h2>
+                        <p class="profile-email" th:text="${alumno.usuario.correo}">elizabeth1998@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Información General -->
+            <section class="section general-info">
+                <div class="section-title with-button">
+                    <div class="title-left">
+                        <img th:src="@{/img/registro/icon1.png}" alt="Info Icon">
+                        <h3>Información General</h3>
+                    </div>
+                    <button id="edit-button" class="edit-button" th:onclick="'toggleEditMode(' + ${alumno.id_alumno} + ')'">Edit</button>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Fecha de registro</span>
+                        <span class="value" th:text="${#dates.format(alumno.inscripciones[0].fecha_inscripcion, 'MMM dd, yyyy')}">May 27, 2022</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Teléfono</span>
+                        <span class="value" id="telefono-span" th:text="${alumno.telefono}"></span>
+                        <input type="text" id="telefono-input" class="edit-input" style="display: none;" th:value="${alumno.telefono}">
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Edad</span>
+                        <span class="value" th:text="${edad}">15 años</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Info Médica</span>
+                        <span class="value" id="info-medica-span" th:text="${alumno.info_medica}"></span>
+                        <input type="text" id="info-medica-input" class="edit-input" style="display: none;" th:value="${alumno.info_medica}">
+                    </div>
+                </div>
+            </section>  
+
+            <!-- Contacto de Emergencia -->
+            <section class="section emergency-contact">
+                <div class="section-title with-button">
+                    <div class="title-left">
+                        <img th:src="@{/img/registro/icon2.png}" alt="Emergency Icon">
+                        <h3>Contacto de emergencia</h3>
+                    </div>
+                    <button id="edit-contactos" class="edit-button" th:onclick="'toggleEditContactos(' + ${alumno.id_alumno} + ')'">Edit</button>
+                </div>
+                <div class="info-grid contactos" th:each="contacto, iterStat : ${alumno.contactos}">
+                    <div class="info-item">
+                        <span class="label">Nombre</span>
+                        <span class="value" th:text="${contacto.nombre}" th:id="'nombre-span-' + ${iterStat.index}">Silvia</span>
+                        <input type="text" th:id="'nombre-input-' + ${iterStat.index}" class="edit-input" style="display: none;" th:value="${contacto.nombre}" />
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Apellido</span>
+                        <span class="value" th:text="${contacto.apellido}" th:id="'apellido-span-' + ${iterStat.index}">Olivia Lopez Aranda</span>
+                        <input type="text" th:id="'apellido-input-' + ${iterStat.index}" class="edit-input" style="display: none;" th:value="${contacto.apellido}" />
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Relación</span>
+                        <span class="value" th:text="${contacto.parentesco}" th:id="'relacion-span-' + ${iterStat.index}">Hermana/o</span>
+                        <input type="text" th:id="'relacion-input-' + ${iterStat.index}" class="edit-input" style="display: none;" th:value="${contacto.parentesco}" />
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Teléfono</span>
+                        <span class="value" th:text="${contacto.telefono}" th:id="'telefono-span-' + ${iterStat.index}">7724-3704</span>
+                        <input type="text" th:id="'telefono-input-' + ${iterStat.index}" class="edit-input" style="display: none;" th:value="${contacto.telefono}" />
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Inscripciones -->
+            <section class="section subscriptions" th:data-alumno-id="${alumno.id_alumno}">
+                <div class="section-title with-button">
+                    <div class="title-left">
+                        <img th:src="@{/img/registro/icon3.png}" alt="Subscription Icon">
+                        <h3>Suscripciones</h3>
+                    </div>
+                    <button id="edit-subscriptions" class="edit-button" onclick="toggleEditModeInscripciones()">Edit</button>
+                </div>
+                <div class="subscription-list">
+                    <ul>
+                        <li th:each="inscripcionAlumno, iterStat : ${alumno.inscripciones}" th:data-inscripcion-id="${inscripcionAlumno.id_inscripcion}">
+                            Inscripción:
+                            <ul>
+                                <li th:each="inscripcionClub : ${inscripcionAlumno.inscripcionesClub}" class="inscripcioneslist">
+                                    <div>Club: <span th:text="${inscripcionClub.club.nombre_club}"></span></div>
+                                    <div class="days-remaining" th:text="${#dates.format(inscripcionAlumno.fecha_actualizacion, 'MMM dd, yyyy')}">27 días</div>
+                                </li>
+                            </ul>
+                            <div>
+                                <span>Estado: </span>
+                                <span th:text="${inscripcionAlumno.estado}" th:id="'estado-span-' + ${iterStat.index}" th:classappend="${inscripcionAlumno.estado == 'Activo'} ? 'estado estado-activo' : 'estado estado-inactivo'">Activo</span>
+                                <label class="switch" th:id="'estado-switch-' + ${iterStat.index}" style="display: none;">
+                                    <input type="checkbox" th:checked="${inscripcionAlumno.estado == 'Activo'}">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+           <!-- Información de Pagos -->
+            <section class="section payment-section">
+                <div class="section-title">
+                    <img th:src="@{/img/registro/icon4.png}" alt="Info Icon">
+                    <h3>Pagos</h3>
+                </div>
+
+                <table class="payment-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Iteración sobre los pagos del alumno -->
+                        <tr th:each="pago : ${alumno.pagos}">
+                            <td th:text="${pago.id_pago}">#29340</td>
+                            <td th:text="${pago.monto}">$30</td>
+                            <td th:text="${pago.estado}" 
+                                th:classappend="'status-' + ${#strings.toLowerCase(pago.estado)}">
+                                Incompleto
+                            </td>
+                            <td th:text="${pago.fecha_pago}">Jan 15, 2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="total">
+                    <span class="total-number" th:text="${alumno.pagos.size()}">6</span>
+                    <span class="total-text"> total</span>
+                </div>
+            </section>
+
+            <!-- Historial de Asistencias -->
+            <section class="section attendance-history">
+                <div class="section-title">
+                    <img th:src="@{/img/registro/icon5.png}" alt="Info Icon">
+                    <h3>Historial de asistencias</h3>
+                </div>
+                <div class="attendance-item late">
+                    <div class="dot"></div>
+                    <span class="attendance-description">Llegada tarde</span>
+                    <span class="attendance-date">08:02 PM - Feb 15, 2023</span>
+                </div>
+                <div class="attendance-item on-time">
+                    <div class="dot"></div>
+                    <span class="attendance-description">A tiempo</span>
+                    <span class="attendance-date">07:02 PM - May 02, 2023</span>
+                </div>
+                <div class="show-more">Mostrar más</div>
+            </section>
+        </main>
+    </div>
+
+    <script th:src="@{/js/detalleEst.js}"></script>
+
+</body>
+</html>
+
