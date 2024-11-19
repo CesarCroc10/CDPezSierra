@@ -9,5 +9,4 @@ public class CdPezSierraApplication {
     public static void main(String[] args) {
         SpringApplication.run(CdPezSierraApplication.class, args);
     }
-
 }
