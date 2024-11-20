@@ -386,3 +386,152 @@ header {
 }
 
 
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.section-title h3 {
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.subscription-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.subscription-list > ul > li {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.inscripcioneslist{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription-list > ul > li > ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #2980b9;
+}
+
+.subscription-list > ul > li > ul > li {
+    font-size: 18px;
+    color: #7f8c8d;
+    position: relative;
+}
+
+/* Estilo para los nombres de los clubes */
+.subscription-list .club-name {
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Estilos adicionales */
+.section:hover {
+    background-color: #e0e6ed;
+}
+
+.section-title h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-list ul ul li:hover {
+    color: #2980b9;
+}
+
+/* Estilo para los días restantes */
+.days-remaining {
+    font-size: 16px;
+    color: #e74c3c;
+    background-color: #fdf2f2;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contactos{
+    margin-top: 2%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Color del slider cuando está activo */
+input:checked + .slider {
+    background-color: #4CAF50; /* Verde */
+}
+
+/* Color del slider cuando está inactivo */
+input:not(:checked) + .slider {
+    background-color: #f44336; /* Rojo */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Apariencia para el texto de estado */
+.estado {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/* Color del texto cuando está activo */
+.estado-activo {
+    color: #4CAF50; /* Verde */
+}
+
+/* Color del texto cuando está inactivo */
+.estado-inactivo {
+    color: #f44336; /* Rojo */
+}
+
+
+
+
